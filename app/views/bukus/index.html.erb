@@ -1,0 +1,10 @@
+<h1>Bukus</h1>
+
+<ul>
+    <% @bukus.each do |buku| %>
+        <li>
+            <%= link_to buku.date, buku %>
+            <%= link_to buku.title, buku %>
+        </li>
+    <% end %>
+</ul>
