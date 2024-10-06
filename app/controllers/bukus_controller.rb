@@ -35,9 +35,15 @@ class BukusController < ApplicationController
     end
   end
 
+  def destroy
+    @buku = Buku.find(params[:id])
+    @buku.destroy
+
+    redirect_to root_path, status: :see_other
+  end
+
   private
      def buku_params
        params.require(:buku).permit(:title, :date, :description)
      end
-
 end

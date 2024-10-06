@@ -4,7 +4,7 @@
 
 <ul>
     <li><%= link_to "Edit", edit_buku_path(@buku) %></li>
-    <li><%= link_to "Destroy", edit_buku_path(@buku), 
+    <li><%= link_to "Destroy", buku_path(@buku), 
     data:{ turbo_method: :delete, 
     turbo_confirm: "Are you sure?"} %></li>   
 </ul>
