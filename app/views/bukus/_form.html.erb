@@ -1,0 +1,33 @@
+<%= form_with model: buku do |form| %>
+  <div>
+    <%= form.label :title %><br>
+    <%= form.text_field :title %>
+    <% buku.errors.full_messages_for(:title).each do |message| %>
+      <div><%= "please retype the title" %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :date %><br>
+    <%= form.date_field :date %>
+    <% buku.errors.full_messages_for(:date).each do |message| %>
+      <div><%= "please retype the date" %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :description %><br>
+    <%= form.text_area :description %>
+    <% buku.errors.full_messages_for(:description).each do |message| %>
+      <div><%= "please retype the description" %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
+
+<%= link_to "Index", root_path %>
+
+  

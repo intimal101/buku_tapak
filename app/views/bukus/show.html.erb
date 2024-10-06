@@ -1,0 +1,12 @@
+<h1><%= @buku.title %></h1>
+<p><%= @buku.date %></p>
+<p><%= @buku.description %></p>
+
+<ul>
+    <li><%= link_to "Edit", edit_buku_path(@buku) %></li>
+    <li><%= link_to "Destroy", edit_buku_path(@buku), 
+    data:{ turbo_method: :delete, 
+    turbo_confirm: "Are you sure?"} %></li>   
+</ul>
+
+<%= link_to "Index", root_path %>
